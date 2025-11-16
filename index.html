@@ -357,14 +357,50 @@
     <div class="container">
       <h2 class="title">Observation 1</h2>
       
-      <p style="margin-bottom: 2rem;">
-        Clients with similar tasks/domains should contribute to the same LoRA expert through averaging, while those with different ones should be assigned to different LoRA experts.
-      </p>
-      
       <div style="display: flex; gap: 1rem; margin-bottom: 2rem;">
         <img src="static/images/ob1_heter.png" alt="Heterogeneous case" style="width: 50%; height: auto;">
         <img src="static/images/ob1_homo.png" alt="Homogeneous case" style="width: 50%; height: auto;">
       </div>
+
+      <p style="margin-bottom: 2rem;">
+        Clients with similar tasks/domains should contribute to the same LoRA expert through averaging, while those with different ones should be assigned to different LoRA experts.
+      </p>
+      
+    </div>
+  </div>
+</section>
+
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title">Observation 2</h2>
+      
+      <div style="display: flex; gap: 1rem; margin-bottom: 2rem;">
+        <img src="static/images/ob2_a.png" alt="Lora A case" style="width: 33%; height: auto;">
+        <img src="static/images/ob2_b.png" alt="Lora B case" style="width: 33%; height: auto;">
+        <img src="static/images/ob2_ba.png" alt="Lora BA case" style="width: 33%; height: auto;">
+      </div>
+
+      <p style="margin-bottom: 2rem;">
+        Task heterogeneity among clients can be detected through representation similarity of LoRA B matrices after brief local training.
+      </p>
+      
+    </div>
+  </div>
+</section>
+
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title">Observation 2</h2>
+      
+      <div style="display: flex; gap: 1rem; margin-bottom: 2rem;">
+        <img src="static/images/ob3.png" alt="Top k case" style="width: 100%; height: auto;">
+      </div>
+
+      <p style="margin-bottom: 2rem;">
+        Clients utilize varying numbers of LoRA experts for optimal performance.
+      </p>
       
     </div>
   </div>
