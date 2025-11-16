@@ -351,7 +351,24 @@
 </section>
 <!-- End paper abstract -->
 
-<!-- Observations -->
+<!-- Paper abstract -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Large Language Models (LLMs) have demonstrated impressive capabilities across various tasks, but fine-tuning them for domain-specific applications often requires substantial domain-specific data that may be distributed across multiple organizations. Federated Learning (FL) offers a privacy-preserving solution, but faces challenges with computational constraints when applied to LLMs. Low-Rank Adaptation (LoRA) has emerged as a parameter-efficient fine-tuning approach, though a single LoRA module often struggles with heterogeneous data across diverse domains. This paper addresses two critical challenges in federated LoRA fine-tuning: 1. determining the optimal number and allocation of LoRA experts across heterogeneous clients, and 2. enabling clients to selectively utilize these experts based on their specific data characteristics. We propose FedLEASE (Federated adaptive LoRA Expert Allocation and SElection), a novel framework that adaptively clusters clients based on representation similarity to allocate and train domain-specific LoRA experts. It also introduces an adaptive top-M Mixture-of-Experts mechanism that allows each client to select the optimal number of utilized experts. Our extensive experiments on diverse benchmark datasets demonstrate that FedLEASE significantly outperforms existing federated fine-tuning approaches in heterogeneous client settings while maintaining communication efficiency.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End paper abstract -->
+
+<!-- Observation 1 -->
 <section class="hero is-small">
   <div class="hero-body">
     <div class="container">
@@ -361,7 +378,6 @@
         <img src="static/images/ob1_heter.png" alt="Heterogeneous case" style="width: 50%; height: auto;">
         <img src="static/images/ob1_homo.png" alt="Homogeneous case" style="width: 50%; height: auto;">
       </div>
-
       <p style="margin-bottom: 2rem;">
         Clients with similar tasks/domains should contribute to the same LoRA expert through averaging, while those with different ones should be assigned to different LoRA experts.
       </p>
@@ -369,8 +385,10 @@
     </div>
   </div>
 </section>
+<!-- End Observation 1 -->
 
-<section class="hero is-small">
+<!-- Observation 2 -->
+<section class="hero is-small is-light">
   <div class="hero-body">
     <div class="container">
       <h2 class="title">Observation 2</h2>
@@ -380,7 +398,6 @@
         <img src="static/images/ob2_b.png" alt="Lora B case" style="width: 33%; height: auto;">
         <img src="static/images/ob2_ba.png" alt="Lora BA case" style="width: 33%; height: auto;">
       </div>
-
       <p style="margin-bottom: 2rem;">
         Task heterogeneity among clients can be detected through representation similarity of LoRA B matrices after brief local training.
       </p>
@@ -388,16 +405,17 @@
     </div>
   </div>
 </section>
+<!-- End Observation 2 -->
 
+<!-- Observation 3 -->
 <section class="hero is-small">
   <div class="hero-body">
     <div class="container">
-      <h2 class="title">Observation 2</h2>
+      <h2 class="title">Observation 3</h2>
       
-      <div style="display: flex; gap: 1rem; margin-bottom: 2rem;">
-        <img src="static/images/ob3.png" alt="Top k case" style="width: 100%; height: auto;">
+      <div style="display: flex; justify-content: center; margin-bottom: 2rem;">
+        <img src="static/images/ob3.png" alt="Top k case" style="width: 60%; height: auto; max-height: 400px; object-fit: contain;">
       </div>
-
       <p style="margin-bottom: 2rem;">
         Clients utilize varying numbers of LoRA experts for optimal performance.
       </p>
@@ -405,7 +423,7 @@
     </div>
   </div>
 </section>
-<!-- End observations -->
+<!-- End Observation 3 -->
 
 <!--BibTex citation -->
   <section class="section" id="BibTeX">
