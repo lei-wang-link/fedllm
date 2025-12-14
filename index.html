@@ -239,6 +239,19 @@
     .lab-link-btn i {
       font-size: 1.1rem;
     }
+    
+    .member-card {
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    
+    .member-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 4px 16px rgba(0,0,0,0.15) !important;
+    }
+    
+    .member-card a:hover {
+      text-decoration: underline !important;
+    }
   </style>
 </head>
 <body>
@@ -263,13 +276,7 @@
             <h1 class="title is-1 publication-title">Federated Fine-Tuning of Foundation Models</h1>
             <div class="is-size-5 publication-authors">
               <span class="author-block">
-                <a href="https://jmbian.github.io/" target="_blank">Jieming Bian</a>,</span>
-              <span class="author-block">
-                <a href="https://lei-wang-link.github.io/" target="_blank">Lei Wang</a>,</span>
-              <span class="author-block">
-                <a href="https://letian-zhang.github.io/" target="_blank">Letian Zhang</a>,</span>
-              <span class="author-block">
-                <a href="https://jiexu.ece.ufl.edu/" target="_blank">Jie Xu</a>
+                <a href="https://jiexu.ece.ufl.edu/" target="_blank">CoSINE Lab</a>
               </span>
             </div>
 
@@ -416,7 +423,8 @@
         <h3 class="paper-title">FedALT: Federated Fine-Tuning through Adaptive Local Training with Rest-of-World LoRA</h3>
         
         <p class="paper-authors">
-          Jieming Bian, Lei Wang, Letian Zhang, Jie Xu
+          Jieming Bian*, Lei Wang*, Letian Zhang, Jie Xu
+          <br><small><sup>*</sup>Equal Contribution</small>
         </p>
         
         <p class="paper-venue">AAAI Conference on Artificial Intelligence (AAAI), 2026</p>
@@ -459,6 +467,51 @@
   </div>
 </section>
 <!-- End Paper 3 -->
+
+<!-- Team Members Section -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Team Members</h2>
+        <div class="content">
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-top: 2rem;">
+            
+            <div class="member-card" style="background: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+              <h4 style="color: #2563eb; font-weight: 600; margin-bottom: 0.5rem;">
+                <a href="https://jmbian.github.io/" target="_blank" style="color: #2563eb; text-decoration: none;">Jieming Bian</a>
+              </h4>
+              <p style="color: #64748b; font-size: 0.95rem;">University of Florida</p>
+            </div>
+
+            <div class="member-card" style="background: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+              <h4 style="color: #2563eb; font-weight: 600; margin-bottom: 0.5rem;">
+                <a href="https://lei-wang-link.github.io/" target="_blank" style="color: #2563eb; text-decoration: none;">Lei Wang</a>
+              </h4>
+              <p style="color: #64748b; font-size: 0.95rem;">University of Florida</p>
+            </div>
+
+            <div class="member-card" style="background: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+              <h4 style="color: #2563eb; font-weight: 600; margin-bottom: 0.5rem;">
+                <a href="https://letian-zhang.github.io/" target="_blank" style="color: #2563eb; text-decoration: none;">Letian Zhang</a>
+              </h4>
+              <p style="color: #64748b; font-size: 0.95rem;">Middle Tennessee State University</p>
+            </div>
+
+            <div class="member-card" style="background: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+              <h4 style="color: #2563eb; font-weight: 600; margin-bottom: 0.5rem;">
+                <a href="https://jiexu.ece.ufl.edu/" target="_blank" style="color: #2563eb; text-decoration: none;">Jie Xu</a>
+              </h4>
+              <p style="color: #64748b; font-size: 0.95rem;">University of Florida</p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Team Members Section -->
 
 <!--BibTex citation -->
 <section class="section" id="BibTeX">
