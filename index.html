@@ -3,113 +3,244 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <!-- Primary Meta Tags (Project-level) -->
-  <meta name="title" content="Federated Fine-Tuning with LoRA (FedPEFT) — UF CoSINE Lab">
-  <meta name="description" content="A one-page project site summarizing our lab’s series of works on federated fine-tuning with LoRA, covering aggregation/initialization refinement, adaptive expert allocation/selection, and Rest-of-World LoRA for reduced cross-client interference.">
-  <meta name="keywords" content="Federated Learning, Federated Fine-Tuning, PEFT, LoRA, Large Language Models, Vision Transformers, Personalization">
-  <meta name="author" content="Lei Wang, Jieming Bian, Letian Zhang, Jie Xu">
+  
+  <!-- Primary Meta Tags -->
+  <meta name="title" content="Federated Fine-Tuning of Foundation Models - University of Florida CoSINE Lab">
+  <meta name="description" content="A comprehensive research series on federated fine-tuning of foundation models using Low-Rank Adaptation (LoRA), addressing aggregation bias, expert allocation, and personalized adaptation in privacy-preserving collaborative learning.">
+  <meta name="keywords" content="Federated Learning, Foundation Models, LoRA Fine-Tuning, Parameter-Efficient Fine-Tuning, Large Language Models, Privacy-Preserving ML, Mixture of Experts">
+  <meta name="author" content="Jieming Bian, Lei Wang, Letian Zhang, Jie Xu">
   <meta name="robots" content="index, follow">
   <meta name="language" content="English">
-
-  <!-- Open Graph / Facebook (Project-level) -->
-  <meta property="og:type" content="website">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="article">
   <meta property="og:site_name" content="University of Florida CoSINE Lab">
-  <meta property="og:title" content="Federated Fine-Tuning with LoRA (FedPEFT) — A Series of Works">
-  <meta property="og:description" content="A project page summarizing our series of works on federated LoRA fine-tuning: LoRA-FAIR (ICCV 2025), FedLEASE (NeurIPS 2025), and FedALT (AAAI 2026).">
-  <meta property="og:url" content="REPLACE_WITH_PROJECT_PAGE_URL">
-  <meta property="og:image" content="REPLACE_WITH_SOCIAL_PREVIEW_IMAGE_URL">
+  <meta property="og:title" content="Federated Fine-Tuning of Foundation Models">
+  <meta property="og:description" content="A comprehensive research series on federated fine-tuning of foundation models using Low-Rank Adaptation (LoRA), addressing aggregation bias, expert allocation, and personalized adaptation.">
+  <meta property="og:url" content="https://YOUR_DOMAIN.github.io/federated-finetuning">
+  <meta property="og:image" content="https://YOUR_DOMAIN.com/static/images/social_preview.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="Federated Fine-Tuning with LoRA (FedPEFT) — Research Preview">
+  <meta property="og:image:alt" content="Federated Fine-Tuning of Foundation Models - Research Preview">
+  <meta property="article:published_time" content="2025-01-01T00:00:00.000Z">
+  <meta property="article:author" content="Jieming Bian">
+  <meta property="article:section" content="Research">
+  <meta property="article:tag" content="Federated Learning">
+  <meta property="article:tag" content="LoRA Fine-Tuning">
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:site" content="REPLACE_WITH_LAB_TWITTER_HANDLE">
-  <meta name="twitter:creator" content="REPLACE_WITH_FIRST_AUTHOR_TWITTER_HANDLE">
-  <meta name="twitter:title" content="Federated Fine-Tuning with LoRA (FedPEFT) — A Series of Works">
-  <meta name="twitter:description" content="A one-page overview of our lab’s works on federated LoRA fine-tuning: aggregation/initialization refinement, adaptive expert allocation, and Rest-of-World LoRA for personalization.">
-  <meta name="twitter:image" content="REPLACE_WITH_SOCIAL_PREVIEW_IMAGE_URL">
-  <meta name="twitter:image:alt" content="Federated Fine-Tuning with LoRA (FedPEFT) — Research Preview">
+  <meta name="twitter:site" content="@YOUR_TWITTER_HANDLE">
+  <meta name="twitter:creator" content="@AUTHOR_TWITTER_HANDLE">
+  <meta name="twitter:title" content="Federated Fine-Tuning of Foundation Models">
+  <meta name="twitter:description" content="A comprehensive research series on federated fine-tuning of foundation models using LoRA, addressing key challenges in privacy-preserving collaborative learning.">
+  <meta name="twitter:image" content="https://YOUR_DOMAIN.com/static/images/social_preview.png">
+  <meta name="twitter:image:alt" content="Federated Fine-Tuning of Foundation Models - Research Preview">
 
+  <!-- Academic/Research Specific -->
+  <meta name="citation_title" content="Federated Fine-Tuning of Foundation Models">
+  <meta name="citation_author" content="Bian, Jieming">
+  <meta name="citation_author" content="Wang, Lei">
+  <meta name="citation_author" content="Zhang, Letian">
+  <meta name="citation_author" content="Xu, Jie">
+  <meta name="citation_publication_date" content="2025">
+  
   <!-- Additional SEO -->
   <meta name="theme-color" content="#2563eb">
   <meta name="msapplication-TileColor" content="#2563eb">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="default">
-
+  
   <!-- Preconnect for performance -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://ajax.googleapis.com">
-  <link rel="preconnect" href="https://documentcloud.adobe.com">
   <link rel="preconnect" href="https://cdn.jsdelivr.net">
 
-  <title>Federated Fine-Tuning with LoRA (FedPEFT) — UF CoSINE Lab</title>
-
+  <title>Federated Fine-Tuning of Foundation Models | University of Florida CoSINE Lab</title>
+  
   <!-- Favicon and App Icons -->
   <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
   <link rel="apple-touch-icon" href="static/images/favicon.ico">
-
+  
   <!-- Critical CSS - Load synchronously -->
   <link rel="stylesheet" href="static/css/bulma.min.css">
   <link rel="stylesheet" href="static/css/index.css">
-
+  
   <!-- Non-critical CSS - Load asynchronously -->
   <link rel="preload" href="static/css/bulma-carousel.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <link rel="preload" href="static/css/bulma-slider.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <link rel="preload" href="static/css/fontawesome.all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <link rel="preload" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-
+  
+  <!-- Fallback for browsers that don't support preload -->
   <noscript>
     <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
     <link rel="stylesheet" href="static/css/bulma-slider.min.css">
     <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   </noscript>
-
+  
   <!-- Fonts - Optimized loading -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-
+  
   <!-- Defer non-critical JavaScript -->
   <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script defer src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
   <script defer src="static/js/fontawesome.all.min.js"></script>
   <script defer src="static/js/bulma-carousel.min.js"></script>
   <script defer src="static/js/bulma-slider.min.js"></script>
   <script defer src="static/js/index.js"></script>
-
-  <!-- Structured Data (Project-level) -->
+  
+  <!-- Structured Data for Academic Papers -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "WebPage",
-    "name": "Federated Fine-Tuning with LoRA (FedPEFT) — A Series of Works",
-    "description": "A one-page overview of our lab’s series of works on federated LoRA fine-tuning: LoRA-FAIR (ICCV 2025), FedLEASE (NeurIPS 2025), and FedALT (AAAI 2026).",
-    "url": "REPLACE_WITH_PROJECT_PAGE_URL",
-    "primaryImageOfPage": "REPLACE_WITH_SOCIAL_PREVIEW_IMAGE_URL",
-    "about": [
-      {"@type": "Thing", "name": "Federated Learning"},
-      {"@type": "Thing", "name": "Parameter-Efficient Fine-Tuning"},
-      {"@type": "Thing", "name": "LoRA"}
-    ]
+    "@type": "ScholarlyArticle",
+    "headline": "Federated Fine-Tuning of Foundation Models",
+    "description": "A comprehensive research series on federated fine-tuning of foundation models using LoRA",
+    "author": [
+      {
+        "@type": "Person",
+        "name": "Jieming Bian",
+        "affiliation": {
+          "@type": "Organization",
+          "name": "University of Florida"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "Lei Wang",
+        "affiliation": {
+          "@type": "Organization",
+          "name": "University of Florida"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "Letian Zhang",
+        "affiliation": {
+          "@type": "Organization",
+          "name": "University of Florida"
+        }
+      },
+      {
+        "@type": "Person",
+        "name": "Jie Xu",
+        "affiliation": {
+          "@type": "Organization",
+          "name": "University of Florida"
+        }
+      }
+    ],
+    "datePublished": "2025-01-01",
+    "url": "https://YOUR_DOMAIN.github.io/federated-finetuning",
+    "keywords": ["Federated Learning", "LoRA", "Foundation Models", "Parameter-Efficient Fine-Tuning"],
+    "isAccessibleForFree": true
   }
   </script>
-
+  
+  <!-- Website/Organization Structured Data -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "University of Florida CoSINE Lab",
-    "url": "REPLACE_WITH_LAB_HOMEPAGE_URL",
-    "sameAs": [
-      "REPLACE_WITH_LAB_GITHUB_URL",
-      "REPLACE_WITH_LAB_TWITTER_URL"
-    ]
+    "url": "https://jiexu.ece.ufl.edu/",
+    "logo": "https://YOUR_DOMAIN.com/static/images/favicon.ico"
   }
   </script>
+  
+  <style>
+    .paper-card {
+      background: white;
+      border-radius: 8px;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    
+    .paper-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+    }
+    
+    .paper-title {
+      color: #2563eb;
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+    
+    .paper-authors {
+      color: #64748b;
+      font-style: italic;
+      margin-bottom: 0.5rem;
+    }
+    
+    .paper-venue {
+      color: #7c3aed;
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+    
+    .paper-abstract {
+      text-align: justify;
+      line-height: 1.7;
+      color: #334155;
+      margin-bottom: 1.5rem;
+    }
+    
+    .paper-figure-placeholder {
+      background: #f1f5f9;
+      border: 2px dashed #cbd5e1;
+      border-radius: 6px;
+      padding: 3rem;
+      text-align: center;
+      color: #94a3b8;
+      font-style: italic;
+      margin-bottom: 1.5rem;
+    }
+    
+    .paper-links {
+      display: flex;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+    }
+    
+    .paper-links .button {
+      font-size: 0.95rem;
+    }
+    
+    .lab-link-btn {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      z-index: 1000;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      padding: 12px 24px;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: 600;
+      box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+      transition: all 0.3s;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    
+    .lab-link-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(102, 126, 234, 0.4);
+      color: white;
+    }
+    
+    .lab-link-btn i {
+      font-size: 1.1rem;
+    }
+  </style>
 </head>
-
 <body>
 
   <!-- Scroll to Top Button -->
@@ -117,327 +248,268 @@
     <i class="fas fa-chevron-up"></i>
   </button>
 
-  <!-- Lab Homepage Button (replaces "More Works" dropdown) -->
-  <div class="more-works-container">
-    <a class="more-works-btn" href="REPLACE_WITH_LAB_HOMEPAGE_URL" target="_blank" rel="noopener" title="Visit our lab homepage">
-      <i class="fas fa-home"></i>
-      Lab Homepage
-      <i class="fas fa-external-link-alt" style="margin-left: .5rem;"></i>
-    </a>
-  </div>
+  <!-- Lab Homepage Link -->
+  <a href="https://jiexu.ece.ufl.edu/" class="lab-link-btn" target="_blank" title="Visit CoSINE Lab Homepage">
+    <i class="fas fa-home"></i>
+    <span>CoSINE Lab</span>
+  </a>
 
   <main id="main-content">
-
-  <!-- HERO (Project-level) -->
   <section class="hero">
     <div class="hero-body">
       <div class="container is-max-desktop">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-
-            <h1 class="title is-1 publication-title">Federated Fine-Tuning with LoRA (FedPEFT): A Series of Works</h1>
-
+            <h1 class="title is-1 publication-title">Federated Fine-Tuning of Foundation Models</h1>
             <div class="is-size-5 publication-authors">
               <span class="author-block">
-                <a href="REPLACE_WITH_LEI_HOMEPAGE" target="_blank">Lei Wang</a>,</span>
+                <a href="https://jmbian.github.io/" target="_blank">Jieming Bian</a>,</span>
               <span class="author-block">
-                <a href="REPLACE_WITH_JIEMING_HOMEPAGE" target="_blank">Jieming Bian</a>,</span>
+                <a href="https://lei-wang-link.github.io/" target="_blank">Lei Wang</a>,</span>
               <span class="author-block">
-                <a href="REPLACE_WITH_LETIAN_HOMEPAGE" target="_blank">Letian Zhang</a>,</span>
+                <a href="https://letian-zhang.github.io/" target="_blank">Letian Zhang</a>,</span>
               <span class="author-block">
-                <a href="REPLACE_WITH_JIEXU_HOMEPAGE" target="_blank">Jie Xu</a>
+                <a href="https://jiexu.ece.ufl.edu/" target="_blank">Jie Xu</a>
               </span>
             </div>
 
             <div class="is-size-5 publication-authors">
-              <span class="author-block">University of Florida · CoSINE Lab</span>
-              <span class="eql-cntrb"><small><br>Project page summarizing three related publications (ICCV 2025, NeurIPS 2025, AAAI 2026)</small></span>
+              <span class="author-block">University of Florida</span>
             </div>
-
-            <div class="column has-text-centered">
-              <div class="publication-links">
-
-                <span class="link-block">
-                  <a href="REPLACE_WITH_PROJECT_GITHUB_URL" target="_blank" rel="noopener"
-                     class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon"><i class="fab fa-github"></i></span>
-                    <span>Project GitHub</span>
-                  </a>
-                </span>
-
-                <span class="link-block">
-                  <a href="#papers" class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon"><i class="fas fa-layer-group"></i></span>
-                    <span>Featured Works</span>
-                  </a>
-                </span>
-
-                <span class="link-block">
-                  <a href="REPLACE_WITH_LAB_HOMEPAGE_URL" target="_blank" rel="noopener"
-                     class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon"><i class="fas fa-home"></i></span>
-                    <span>Lab Homepage</span>
-                  </a>
-                </span>
-
-              </div>
-            </div>
-
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Teaser / Overview Figure -->
-  <section class="hero teaser">
-    <div class="container is-max-desktop">
-      <div class="hero-body">
-        <img src="static/images/project_overview_placeholder.png" alt="Project overview (placeholder)" style="width: 100%; height: auto;">
-        <h2 class="subtitle has-text-centered">
-          <strong>Project overview (placeholder):</strong> Add a single figure that visually connects our three works—
-          LoRA-FAIR (aggregation/initialization refinement), FedLEASE (adaptive experts), and FedALT (Rest-of-World LoRA).
-        </h2>
-      </div>
-    </div>
-  </section>
-
-  <!-- Project Introduction (replaces paper abstract) -->
-  <section class="section hero is-light" id="intro">
-    <div class="container is-max-desktop">
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          <h2 class="title is-3">Project Introduction</h2>
-          <div class="content has-text-justified">
-            <p>
-              Foundation models achieve strong performance across tasks, but domain adaptation is often limited by compute, data locality,
-              and privacy constraints. Parameter-efficient fine-tuning (PEFT) methods such as LoRA reduce training cost by optimizing low-rank
-              adapters, and federated learning enables privacy-preserving collaboration across distributed organizations.
-              However, federated LoRA fine-tuning introduces distinct challenges in practice: biased server aggregation of factorized updates,
-              inconsistent client initialization across rounds, and harmful cross-client interference under heterogeneous data.
-              <br><br>
-              This project consolidates our lab’s research agenda on <strong>federated fine-tuning with LoRA</strong> across three complementary directions:
-              (1) improving global training stability via aggregation/initialization refinement (LoRA-FAIR),
-              (2) handling heterogeneity via adaptive expert allocation and selection (FedLEASE), and
-              (3) reducing cross-client interference via a personalized Rest-of-World LoRA mechanism with adaptive mixing (FedALT).
-            </p>
-          </div>
+<!-- Project Overview -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Project Overview</h2>
+        <div class="content has-text-justified">
+          <p>
+            Foundation models have revolutionized machine learning, demonstrating remarkable capabilities across diverse tasks. However, fine-tuning these large-scale models for domain-specific applications presents significant challenges, particularly when data is distributed across multiple organizations with privacy concerns. This project series addresses the critical intersection of parameter-efficient fine-tuning and federated learning, developing novel methodologies that enable collaborative model adaptation while preserving data privacy and computational efficiency.
+          </p>
+          <p>
+            Our research focuses on Low-Rank Adaptation (LoRA) in federated settings, tackling fundamental challenges including aggregation bias, client heterogeneity, and personalization. Through a systematic exploration spanning three complementary works, we introduce innovative frameworks that advance the state-of-the-art in federated fine-tuning, from improving aggregation mechanisms to adaptive expert allocation and personalized local adaptation strategies.
+          </p>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
+<!-- End Project Overview -->
 
-  <!-- Featured Papers -->
-  <section class="section" id="papers">
+<!-- Paper 1: LoRA-FAIR -->
+<section class="hero is-small">
+  <div class="hero-body">
     <div class="container is-max-desktop">
-      <div class="columns is-centered">
-        <div class="column is-four-fifths has-text-centered">
-          <h2 class="title is-3">Featured Works</h2>
-          <p class="subtitle">Each section contains a short description, a figure placeholder, and links to the paper and code.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Paper 1: LoRA-FAIR -->
-  <section class="hero is-small" id="lora-fair">
-    <div class="hero-body">
-      <div class="container is-max-desktop">
-        <h2 class="title">LoRA-FAIR: Federated LoRA Fine-Tuning with Aggregation and Initialization Refinement</h2>
-        <p class="subtitle" style="margin-top: -.5rem;">
-          <strong>ICCV 2025</strong> · Jieming Bian*, Lei Wang*, Letian Zhang, Jie Xu
+      <div class="paper-card">
+        <h3 class="paper-title">LoRA-FAIR: Federated LoRA Fine-Tuning with Aggregation and Initialization Refinement</h3>
+        
+        <p class="paper-authors">
+          Jieming Bian*, Lei Wang*, Letian Zhang, Jie Xu
+          <br><small><sup>*</sup>Equal Contribution</small>
         </p>
-
-        <div class="publication-links" style="margin-bottom: 1.25rem;">
+        
+        <p class="paper-venue">IEEE/CVF International Conference on Computer Vision (ICCV), 2025</p>
+        
+        <div class="paper-abstract">
+          <p>
+            Foundation models (FMs) achieve strong performance across diverse tasks with task-specific fine-tuning, yet full parameter fine-tuning is often computationally prohibitive for large models. Parameter-efficient fine-tuning (PEFT) methods like Low-Rank Adaptation (LoRA) reduce this cost by introducing low-rank matrices for tuning fewer parameters. While LoRA allows for efficient fine-tuning, it requires significant data for adaptation, making Federated Learning (FL) an appealing solution due to its privacy-preserving collaborative framework.
+          </p>
+          <p style="margin-top: 1rem;">
+            However, combining LoRA with FL introduces two key challenges: the Server-Side Aggregation Bias, where server-side averaging of LoRA matrices diverges from the ideal global update, and the Client-Side Initialization Lag, emphasizing the need for consistent initialization across rounds. Existing approaches address these challenges individually, limiting their effectiveness. We propose LoRA-FAIR, a novel method that tackles both issues by introducing a correction term on the server, enhancing aggregation efficiency and accuracy. LoRA-FAIR maintains computational and communication efficiency, yielding superior performance over state-of-the-art methods.
+          </p>
+        </div>
+        
+        <div class="paper-figure-placeholder">
+          [Paper Figure Placeholder - Add your method overview or key results visualization]
+        </div>
+        
+        <div class="paper-links">
           <span class="link-block">
-            <a href="REPLACE_WITH_LORA_FAIR_PAPER_URL" target="_blank" rel="noopener"
-               class="external-link button is-normal is-rounded is-dark">
+            <a href="#" target="_blank" class="external-link button is-normal is-rounded is-dark">
               <span class="icon"><i class="fas fa-file-pdf"></i></span>
               <span>Paper</span>
             </a>
           </span>
           <span class="link-block">
-            <a href="REPLACE_WITH_LORA_FAIR_CODE_URL" target="_blank" rel="noopener"
-               class="external-link button is-normal is-rounded is-dark">
+            <a href="#" target="_blank" class="external-link button is-normal is-rounded is-dark">
               <span class="icon"><i class="fab fa-github"></i></span>
               <span>Code</span>
             </a>
           </span>
           <span class="link-block">
-            <a href="REPLACE_WITH_LORA_FAIR_ARXIV_URL" target="_blank" rel="noopener"
-               class="external-link button is-normal is-rounded is-dark">
+            <a href="#" target="_blank" class="external-link button is-normal is-rounded is-dark">
               <span class="icon"><i class="ai ai-arxiv"></i></span>
               <span>arXiv</span>
             </a>
           </span>
         </div>
-
-        <img src="static/images/lora_fair_figure_placeholder.png" alt="LoRA-FAIR figure (placeholder)" style="width: 100%; height: auto;">
-
-        <div class="content has-text-justified" style="margin-top: 1rem;">
-          <p>
-            LoRA-FAIR targets two key issues in federated LoRA: <em>server-side aggregation bias</em> (naïve averaging of LoRA factors can deviate
-            from the ideal global update) and <em>client-side initialization lag</em> (the need for consistent initialization across rounds).
-            The method introduces a server correction term that improves aggregation efficiency and accuracy while maintaining LoRA’s
-            computational and communication efficiency. Experiments on ViT and MLP-Mixer across large-scale datasets show consistent gains
-            over strong baselines.
-          </p>
-          <p><small><strong>*</strong> indicates co-first authors.</small></p>
-        </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
+<!-- End Paper 1 -->
 
-  <!-- Paper 2: FedLEASE -->
-  <section class="hero is-small is-light" id="fedlease">
-    <div class="hero-body">
-      <div class="container is-max-desktop">
-        <h2 class="title">Adaptive LoRA Experts Allocation and Selection for Federated Fine-Tuning (FedLEASE)</h2>
-        <p class="subtitle" style="margin-top: -.5rem;">
-          <strong>NeurIPS 2025</strong> · Lei Wang*, Jieming Bian*, Letian Zhang, Jie Xu
+<!-- Paper 2: FedLEASE -->
+<section class="hero is-small is-light">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="paper-card">
+        <h3 class="paper-title">Adaptive LoRA Experts Allocation and Selection for Federated Fine-Tuning</h3>
+        
+        <p class="paper-authors">
+          Lei Wang*, Jieming Bian*, Letian Zhang, Jie Xu
+          <br><small><sup>*</sup>Equal Contribution</small>
         </p>
-
-        <div class="publication-links" style="margin-bottom: 1.25rem;">
+        
+        <p class="paper-venue">Neural Information Processing Systems (NeurIPS), 2025</p>
+        
+        <div class="paper-abstract">
+          <p>
+            Large Language Models (LLMs) have demonstrated impressive capabilities across various tasks, but fine-tuning them for domain-specific applications often requires substantial domain-specific data that may be distributed across multiple organizations. Federated Learning (FL) offers a privacy-preserving solution, but faces challenges with computational constraints when applied to LLMs. Low-Rank Adaptation (LoRA) has emerged as a parameter-efficient fine-tuning approach, though a single LoRA module often struggles with heterogeneous data across diverse domains.
+          </p>
+          <p style="margin-top: 1rem;">
+            This paper addresses two critical challenges in federated LoRA fine-tuning: 1. determining the optimal number and allocation of LoRA experts across heterogeneous clients, and 2. enabling clients to selectively utilize these experts based on their specific data characteristics. We propose FedLEASE (Federated adaptive LoRA Expert Allocation and SElection), a novel framework that adaptively clusters clients based on representation similarity to allocate and train domain-specific LoRA experts. It also introduces an adaptive top-M Mixture-of-Experts mechanism that allows each client to select the optimal number of utilized experts. Our extensive experiments on diverse benchmark datasets demonstrate that FedLEASE significantly outperforms existing federated fine-tuning approaches in heterogeneous client settings while maintaining communication efficiency.
+          </p>
+        </div>
+        
+        <div class="paper-figure-placeholder">
+          [Paper Figure Placeholder - Add your method overview or key results visualization]
+        </div>
+        
+        <div class="paper-links">
           <span class="link-block">
-            <a href="REPLACE_WITH_FEDLEASE_PAPER_URL" target="_blank" rel="noopener"
-               class="external-link button is-normal is-rounded is-dark">
+            <a href="https://arxiv.org/pdf/2509.15087.pdf" target="_blank" class="external-link button is-normal is-rounded is-dark">
               <span class="icon"><i class="fas fa-file-pdf"></i></span>
               <span>Paper</span>
             </a>
           </span>
           <span class="link-block">
-            <a href="REPLACE_WITH_FEDLEASE_CODE_URL" target="_blank" rel="noopener"
-               class="external-link button is-normal is-rounded is-dark">
+            <a href="https://github.com/lei-wang-link/FedLEASE" target="_blank" class="external-link button is-normal is-rounded is-dark">
               <span class="icon"><i class="fab fa-github"></i></span>
               <span>Code</span>
             </a>
           </span>
           <span class="link-block">
-            <a href="REPLACE_WITH_FEDLEASE_ARXIV_URL" target="_blank" rel="noopener"
-               class="external-link button is-normal is-rounded is-dark">
+            <a href="https://arxiv.org/abs/2509.15087" target="_blank" class="external-link button is-normal is-rounded is-dark">
               <span class="icon"><i class="ai ai-arxiv"></i></span>
               <span>arXiv</span>
             </a>
           </span>
         </div>
-
-        <img src="static/images/fedlease_figure_placeholder.png" alt="FedLEASE figure (placeholder)" style="width: 100%; height: auto;">
-
-        <div class="content has-text-justified" style="margin-top: 1rem;">
-          <p>
-            A single LoRA module often struggles under heterogeneous client domains. FedLEASE addresses:
-            (1) how many LoRA experts to use and how to allocate them across clients, and
-            (2) how each client can selectively leverage the best experts.
-            FedLEASE adaptively clusters clients based on representation similarity to allocate domain-specific experts,
-            and introduces an adaptive top-M Mixture-of-Experts mechanism so each client can choose how many experts to use.
-            Extensive experiments show strong improvements while keeping communication efficient.
-          </p>
-          <p><small><strong>*</strong> indicates co-first authors.</small></p>
-        </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
+<!-- End Paper 2 -->
 
-  <!-- Paper 3: FedALT -->
-  <section class="hero is-small" id="fedalt">
-    <div class="hero-body">
-      <div class="container is-max-desktop">
-        <h2 class="title">FedALT: Federated Fine-Tuning through Adaptive Local Training with Rest-of-World LoRA</h2>
-        <p class="subtitle" style="margin-top: -.5rem;">
-          <strong>AAAI 2026</strong> · Jieming Bian, Lei Wang, Letian Zhang, Jie Xu
+<!-- Paper 3: FedALT -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="paper-card">
+        <h3 class="paper-title">FedALT: Federated Fine-Tuning through Adaptive Local Training with Rest-of-World LoRA</h3>
+        
+        <p class="paper-authors">
+          Jieming Bian, Lei Wang, Letian Zhang, Jie Xu
         </p>
-
-        <div class="publication-links" style="margin-bottom: 1.25rem;">
+        
+        <p class="paper-venue">AAAI Conference on Artificial Intelligence (AAAI), 2026</p>
+        
+        <div class="paper-abstract">
+          <p>
+            Fine-tuning large language models (LLMs) in federated settings enables privacy-preserving adaptation but suffers from cross-client interference due to model aggregation. Existing federated LoRA fine-tuning methods, primarily based on FedAvg, struggle with data heterogeneity, leading to harmful cross-client interference and suboptimal personalization.
+          </p>
+          <p style="margin-top: 1rem;">
+            In this work, we propose FedALT, a novel personalized federated LoRA fine-tuning algorithm that fundamentally departs from FedAvg. Instead of using an aggregated model to initialize local training, each client continues training its individual LoRA while incorporating shared knowledge through a separate Rest-of-World (RoW) LoRA component. To effectively balance local adaptation and global information, FedALT introduces an adaptive mixer that dynamically learns input-specific weightings between the individual and RoW LoRA components, drawing conceptual foundations from the Mixture-of-Experts (MoE) paradigm. Through extensive experiments on NLP benchmarks, we demonstrate that FedALT significantly outperforms state-of-the-art personalized federated LoRA fine-tuning methods, achieving superior local adaptation without sacrificing computational efficiency.
+          </p>
+        </div>
+        
+        <div class="paper-figure-placeholder">
+          [Paper Figure Placeholder - Add your method overview or key results visualization]
+        </div>
+        
+        <div class="paper-links">
           <span class="link-block">
-            <a href="REPLACE_WITH_FEDALT_PAPER_URL" target="_blank" rel="noopener"
-               class="external-link button is-normal is-rounded is-dark">
+            <a href="#" target="_blank" class="external-link button is-normal is-rounded is-dark">
               <span class="icon"><i class="fas fa-file-pdf"></i></span>
               <span>Paper</span>
             </a>
           </span>
           <span class="link-block">
-            <a href="REPLACE_WITH_FEDALT_CODE_URL" target="_blank" rel="noopener"
-               class="external-link button is-normal is-rounded is-dark">
+            <a href="#" target="_blank" class="external-link button is-normal is-rounded is-dark">
               <span class="icon"><i class="fab fa-github"></i></span>
               <span>Code</span>
             </a>
           </span>
           <span class="link-block">
-            <a href="REPLACE_WITH_FEDALT_ARXIV_URL" target="_blank" rel="noopener"
-               class="external-link button is-normal is-rounded is-dark">
+            <a href="#" target="_blank" class="external-link button is-normal is-rounded is-dark">
               <span class="icon"><i class="ai ai-arxiv"></i></span>
               <span>arXiv</span>
             </a>
           </span>
         </div>
-
-        <img src="static/images/fedalt_figure_placeholder.png" alt="FedALT figure (placeholder)" style="width: 100%; height: auto;">
-
-        <div class="content has-text-justified" style="margin-top: 1rem;">
-          <p>
-            Federated LoRA fine-tuning can suffer from cross-client interference when aggregation mixes incompatible updates.
-            FedALT departs from FedAvg-style initialization by letting each client continue training its own LoRA while incorporating
-            shared knowledge through a separate <em>Rest-of-World (RoW) LoRA</em> component. An adaptive mixer learns input-specific weightings
-            between the individual and RoW components, conceptually connected to Mixture-of-Experts.
-            Experiments on NLP benchmarks show improved local adaptation and personalization without sacrificing efficiency.
-          </p>
-        </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
+<!-- End Paper 3 -->
 
-  <!-- Optional: BibTeX (project-level placeholder) -->
-  <section class="section" id="BibTeX">
-    <div class="container is-max-desktop content">
-      <h2 class="title">BibTeX (Optional)</h2>
-      <p>
-        If you want, include three separate BibTeX entries below (one per paper) or remove this section.
-      </p>
-      <pre><code>%% TODO: Replace with LoRA-FAIR BibTeX
-@inproceedings{lora-fair-iccv2025,
+<!--BibTex citation -->
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <div class="bibtex-header">
+      <h2 class="title">BibTeX</h2>
+      <button class="copy-bibtex-btn" onclick="copyBibTeX()" title="Copy BibTeX to clipboard">
+        <i class="fas fa-copy"></i>
+        <span class="copy-text">Copy</span>
+      </button>
+    </div>
+    <pre id="bibtex-code"><code>@inproceedings{lorafair2025,
   title={LoRA-FAIR: Federated LoRA Fine-Tuning with Aggregation and Initialization Refinement},
   author={Bian, Jieming and Wang, Lei and Zhang, Letian and Xu, Jie},
   booktitle={Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)},
   year={2025}
 }
 
-%% TODO: Replace with FedLEASE BibTeX
-@inproceedings{fedlease-neurips2025,
+@article{fedlease2025,
   title={Adaptive LoRA Experts Allocation and Selection for Federated Fine-Tuning},
   author={Wang, Lei and Bian, Jieming and Zhang, Letian and Xu, Jie},
-  booktitle={Advances in Neural Information Processing Systems (NeurIPS)},
+  journal={Advances in Neural Information Processing Systems (NeurIPS)},
   year={2025}
 }
 
-%% TODO: Replace with FedALT BibTeX
-@inproceedings{fedalt-aaai2026,
+@inproceedings{fedalt2026,
   title={FedALT: Federated Fine-Tuning through Adaptive Local Training with Rest-of-World LoRA},
   author={Bian, Jieming and Wang, Lei and Zhang, Letian and Xu, Jie},
-  booktitle={Proceedings of the AAAI Conference on Artificial Intelligence (AAAI)},
+  booktitle={AAAI Conference on Artificial Intelligence (AAAI)},
   year={2026}
 }</code></pre>
-    </div>
-  </section>
+  </div>
+</section>
+<!--End BibTex citation -->
 
-  <footer class="footer" id="footer">
-    <div class="container">
-      <div class="columns is-centered">
-        <div class="column is-8">
-          <div class="content">
-            <p>
-              This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank" rel="noopener">Academic Project Page Template</a>
-              adopted from the <a href="https://nerfies.github.io" target="_blank" rel="noopener">Nerfies</a> project page.
-              You are free to borrow the source code of this website; please link back to the template in the footer.
-              <br>
-              Licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
-            </p>
-          </div>
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+            You are free to borrow the source code of this website, we just ask that you link back to this page in the footer. <br> This website is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
         </div>
       </div>
     </div>
-  </footer>
+  </div>
+</footer>
 
-  </main>
-
+</main>
 </body>
 </html>
