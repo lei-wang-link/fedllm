@@ -294,13 +294,25 @@
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">Project Overview</h2>
+        <h2 class="title is-3">Research Vision</h2>
         <div class="content has-text-justified">
           <p>
-            Foundation models have revolutionized machine learning, demonstrating remarkable capabilities across diverse tasks. However, fine-tuning these large-scale models for domain-specific applications presents significant challenges, particularly when data is distributed across multiple organizations with privacy concerns. This project series addresses the critical intersection of parameter-efficient fine-tuning and federated learning, developing novel methodologies that enable collaborative model adaptation while preserving data privacy and computational efficiency.
+            The landscape of artificial intelligence is undergoing a fundamental transformation. Today's dominant paradigm—centralized training in massive GPU datacenters—requires collecting vast amounts of data into a single location. However, the most valuable data for training AI systems often cannot be centrally aggregated. Medical records remain locked in hospital systems due to privacy regulations. Corporate data stays siloed within organizations due to competitive concerns. Manufacturing sensor data cannot leave factory premises. Personal information on smartphones must remain on devices to protect user privacy. This represents an enormous volume of distributed data that remains largely untapped for AI development, even as it holds the key to advances in healthcare diagnostics, personalized services, industrial optimization, and countless other domains.
           </p>
           <p>
-            Our research focuses on Low-Rank Adaptation (LoRA) in federated settings, tackling fundamental challenges including aggregation bias, client heterogeneity, and personalization. Through a systematic exploration spanning three complementary works, we introduce innovative frameworks that advance the state-of-the-art in federated fine-tuning, from improving aggregation mechanisms to adaptive expert allocation and personalized local adaptation strategies.
+            Federated learning offers a radically different approach: instead of bringing data to the model, we bring the model to the data. In this paradigm, AI training occurs where data naturally resides—in hospitals, corporations, factories, or even on individual devices. Each location trains the model on its local data, and only the learned updates (not the raw data itself) are shared and aggregated to create a global model. This enables collaborative AI development while preserving data privacy and sovereignty, making it possible to leverage otherwise inaccessible training data across organizational and geographical boundaries.
+          </p>
+          <p>
+            Yet applying federated learning to modern foundation models—the large-scale models powering today's AI breakthroughs—introduces critical technical challenges. These models contain billions of parameters, making traditional fine-tuning computationally prohibitive, especially on resource-constrained edge devices or organizational infrastructure. Parameter-efficient fine-tuning (PEFT) methods, particularly Low-Rank Adaptation (LoRA), have emerged as a solution by training only a small fraction of parameters while achieving comparable performance. LoRA works by adding lightweight "adapter" modules to frozen foundation models, reducing training costs by orders of magnitude.
+          </p>
+          <p>
+            However, combining LoRA with federated learning is far from straightforward. When multiple organizations or devices train their own LoRA adapters on heterogeneous local data and these adapters are aggregated on a central server, several fundamental questions arise: How should we aggregate these low-rank updates to preserve both global knowledge and local specialization? When clients have vastly different data distributions—such as medical institutions specializing in different diseases, or manufacturers with distinct product lines—should we force all clients to share a single global adapter, or enable personalized adaptation? How can we efficiently allocate computational resources when clients have different capabilities and data characteristics? These questions define a critical research direction at the intersection of federated learning and parameter-efficient fine-tuning.
+          </p>
+          <p>
+            This research program systematically addresses these challenges through three complementary perspectives. First, we examine the mathematical foundations of LoRA aggregation in federated settings, revealing and correcting biases that emerge when standard federated averaging is naively applied to low-rank matrices. Second, we explore how to leverage data heterogeneity as an asset rather than an obstacle, developing adaptive mechanisms to allocate specialized LoRA experts to different client clusters and enabling clients to selectively utilize the most relevant experts for their local tasks. Third, we investigate personalized federated fine-tuning strategies that allow each client to maintain individual adaptation while still benefiting from collaborative learning, fundamentally rethinking the balance between local and global knowledge.
+          </p>
+          <p>
+            The ultimate vision is to enable a new generation of AI systems that can be trained on distributed, privacy-sensitive data at unprecedented scale—unlocking collaborative model development across hospitals for better diagnostics, across corporations for improved fraud detection, across manufacturing facilities for predictive maintenance, and across edge devices for personalized services. By making federated fine-tuning of foundation models practical, efficient, and effective, this research direction aims to democratize access to AI capabilities while respecting data privacy, regulatory compliance, and organizational boundaries. As AI regulation increasingly mandates data localization and privacy protection, federated parameter-efficient fine-tuning represents not just a technical innovation, but a necessary evolution in how we develop and deploy AI systems in a privacy-conscious world.
           </p>
         </div>
       </div>
@@ -333,7 +345,7 @@
         </div>
         
         <div style="text-align: center; margin-bottom: 1.5rem;">
-          <img src="static/images/lorafair.png" alt="LoRA-FAIR method overview" style="max-width: 70%; height: auto; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+          <img src="static/images/lorafair.png" alt="LoRA-FAIR method overview" style="max-width: 80%; height: auto; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
         </div>
         
         <div class="paper-links">
@@ -444,7 +456,7 @@
             </a>
           </span>
           <span class="link-block">
-            <a href="#" target="_blank" class="external-link button is-normal is-rounded is-dark">
+            <a href="https://github.com/jmbian/FedALT" target="_blank" class="external-link button is-normal is-rounded is-dark">
               <span class="icon"><i class="fab fa-github"></i></span>
               <span>Code</span>
             </a>
@@ -467,7 +479,7 @@
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column">
-        <h2 class="title is-3">Project Members</h2>
+        <h2 class="title is-3">Team Members</h2>
         <div class="content">
           <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; margin-top: 2rem; max-width: 600px; margin-left: auto; margin-right: auto;">
             
