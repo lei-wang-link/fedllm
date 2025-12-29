@@ -302,6 +302,11 @@
           <p>
             Federated learning offers a radically different approach. Instead of bringing data to the model, we bring the model to the data. In this paradigm, AI training occurs where data naturally resides: in hospitals, corporations, factories, or even on individual devices. Each location trains the model on its local data, and only the learned updates are shared and aggregated to create a global model. The raw data itself never leaves its original location. This enables collaborative AI development while preserving data privacy and sovereignty, making it possible to leverage otherwise inaccessible training data across organizational and geographical boundaries.
           </p>
+          
+          <div style="text-align: center; margin: 2rem 0;">
+            <img src="static/images/distributed_llm.png" alt="Distributed federated learning illustration" style="max-width: 900px; width: 100%; height: auto; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+          </div>
+          
           <p>
             Yet applying federated learning to modern foundation models introduces critical technical challenges. The large-scale models powering today's AI breakthroughs contain billions of parameters, making traditional fine-tuning computationally prohibitive, especially on resource-constrained edge devices or organizational infrastructure. Parameter-efficient fine-tuning methods, particularly Low-Rank Adaptation or LoRA, have emerged as a solution by training only a small fraction of parameters while achieving comparable performance. LoRA works by adding lightweight adapter modules to frozen foundation models, reducing training costs by orders of magnitude.
           </p>
@@ -345,7 +350,7 @@
         </div>
         
         <div style="text-align: center; margin-bottom: 1.5rem;">
-          <img src="static/images/lorafair.png" alt="LoRA-FAIR method overview" style="width: 1000px; height: 350px; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+          <img src="static/images/lorafair.png" alt="LoRA-FAIR method overview" style="width: 350px; height: 700px; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
         </div>
         
         <div class="paper-links">
